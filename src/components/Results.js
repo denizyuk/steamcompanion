@@ -1,23 +1,30 @@
 import React from 'react';
 
+
 function ResultsComponent({ games }) {
   if (!games || games.length === 0) {
     return <div>No common games found.</div>;
   }
 
+  // Sort the games array alphabetically by game name
+  const sortedGames = games.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <div>
-      <h2>Common Games</h2>
-        <div className='gameBox'></div>{games.map(game => (
-            console.log(game),
-          <div className='gameInfo' key={game.appid}>{game.name}
-           <img src={`http://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`} />
+      {/* <h2>Common Games</h2> */}
+      <div className='gameBox'>
+        {sortedGames.map(game => (
+          console.log(game),
+          // <div className='gameInfo' key={game.appid}> {game.name}
+          <div className='gameInfo' key={game.appid}>
+            <a href={`https://store.steampowered.com/app/${game.appid}`}>
+              <img src={`https://steamcdn-a.akamaihd.net/steam/apps/${game.appid}/header.jpg`} />
+            </a>
           </div>
         ))}
+      </div>
     </div>
   );
 }
 
 export default ResultsComponent;
-
-

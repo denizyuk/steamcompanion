@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Search from './components/Search';
 import Results from './components/Results';
 import { findCommonGames } from './connectors/Api';
+import './App.css';
 
 function App() {
   const [games, setGames] = useState(null);
