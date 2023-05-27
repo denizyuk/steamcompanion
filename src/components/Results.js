@@ -17,7 +17,7 @@ function ResultsComponent({ games }) {
           console.log(game),
           // <div className='gameInfo' key={game.appid}> {game.name}
           <div className='gameInfo' key={game.appid}>
-            <a href={`https://store.steampowered.com/app/${game.appid}`}>
+            <a target='_blank' href={`https://store.steampowered.com/app/${game.appid}`}>
               <img src={`https://steamcdn-a.akamaihd.net/steam/apps/${game.appid}/header.jpg`} />
             </a>
           </div>
