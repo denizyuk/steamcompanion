@@ -1,0 +1,9 @@
+.gameBox {
+  height: auto;
+  width: 90vw;
+}
+.game {
+  background-color: red;
+  height: 200px;
+  width: 400px;
+}
