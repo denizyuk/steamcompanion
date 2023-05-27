@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Results({ games }) {
+function ResultsComponent({ games }) {
   if (!games || games.length === 0) {
     return <div>No common games found.</div>;
   }
@@ -8,9 +8,12 @@ function Results({ games }) {
   return (
     <div>
       <h2>Common Games</h2>
-
+        <div className='gameBox'></div>{games.map(game => (
+            console.log(game),
+          <div className='gameInfo' key={game.appid}>{game.name}</div>
+        ))}
     </div>
   );
 }
 
-export default Results;
+export default ResultsComponent;
