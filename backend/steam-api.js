@@ -36,3 +36,5 @@ app.get('/api/steam/games/:steamId', async (req, res) => {
 app.listen(5000, () => {
     console.log('Server listening on port 5000');
 });
+
+// test
